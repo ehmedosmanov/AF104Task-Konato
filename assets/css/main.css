@@ -1,3 +1,27 @@
+.section-title {
+  text-align: center;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-title h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.section-title p {
+  color: #656565;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 0 50px;
+}
+
+.section-space {
+  padding: 100px 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +94,33 @@ img {
   transform: scaleX(0);
 }
 
+.header-bottom-side {
+  background-color: #fff;
+  padding: 15px 0;
+}
+.header-bottom-side .search-form .search-input {
+  position: relative;
+}
+.header-bottom-side .search-form .search-input input {
+  width: 100%;
+  height: 50px;
+  padding: 9px 18px 9px 48px;
+  color: #5e5e5e;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid #beccd6;
+  border-radius: 4px;
+}
+.header-bottom-side .search-form .search-input input:focus {
+  outline: 0;
+}
+.header-bottom-side .search-form .search-input .search-icon {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 #nav {
   background-color: #004274;
   padding: 10px 0;
@@ -121,33 +172,6 @@ img {
   padding-bottom: 5px;
 }
 
-.header-bottom-side {
-  background-color: #fff;
-  padding: 15px 0;
-}
-.header-bottom-side .search-form .search-input {
-  position: relative;
-}
-.header-bottom-side .search-form .search-input input {
-  width: 100%;
-  height: 50px;
-  padding: 9px 18px 9px 48px;
-  color: #5e5e5e;
-  font-size: 15px;
-  font-weight: 400;
-  border: 1px solid #beccd6;
-  border-radius: 4px;
-}
-.header-bottom-side .search-form .search-input input:focus {
-  outline: 0;
-}
-.header-bottom-side .search-form .search-input .search-icon {
-  position: absolute;
-  left: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 #hero {
   background-image: url(https://preview.colorlib.com/theme/konato/assets/img/hero/h1_hero1.jpg.webp);
   background-repeat: no-repeat;
@@ -163,7 +187,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(29, 39, 59, 0.3);
+  background-color: rgba(29, 39, 59, 0.4);
   z-index: 0;
 }
 #hero .hero-content {
@@ -188,8 +212,56 @@ img {
   font-size: 2.5rem;
 }
 
-@media only screen and (max-width: 576px) {
-  #hero .hero-content h1 {
-    font-size: 2.4rem;
+#latets .card-custom .card-img {
+  overflow: hidden;
+}
+#latets .card-custom img {
+  transition: all 0.5s;
+  object-fit: cover;
+  width: 100%;
+}
+#latets .card-custom:hover img {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+#latets .card-custom .card-content {
+  border: 1px solid #beccd6;
+  padding: 30px 20px 15px 20px;
+}
+#latets .card-custom .card-content span {
+  color: #00aeff;
+}
+#latets .card-custom .card-content a {
+  font-size: 1.2rem;
+  color: #000;
+}
+#latets .card-custom .card-content p {
+  color: #5e5e5e;
+  line-height: 1.6;
+}
+#latets .card-custom .card-info {
+  border: 1px solid #beccd6;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+#latets .card-custom .card-info .bedroom-info span {
+  color: #192839;
+  font-size: 15px;
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=main.css.map */

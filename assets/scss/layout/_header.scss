@@ -1,0 +1,34 @@
+@use '../abstracts/index' as *; //! Import variables and mixins from the 'index' file in the 'abstracts' directory.
+
+// Header Bottom Side Start
+.header-bottom-side {
+  background-color: $white-color;
+  padding: 15px 0;
+
+  .search-form {
+    .search-input {
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 50px;
+        padding: 9px 18px 9px 48px;
+        color: #5e5e5e;
+        font-size: 15px;
+        font-weight: 400;
+        border: 1px solid #beccd6;
+        border-radius: 4px;
+        &:focus {
+          outline: 0;
+        }
+      }
+      .search-icon {
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+// Header Bottom Side End
