@@ -3,7 +3,6 @@
 // Navbar Start
 #nav {
   background-color: $primary-color;
-  padding: 10px 0;
   a {
     color: #fff;
   }
@@ -23,29 +22,57 @@
         display: flex;
         align-items: center;
 
-        li {
-          padding: 17px 15px;
+        .navbar-item {
+          padding: 25px 15px;
           cursor: pointer;
           position: relative;
-          &:hover a {
+          &:hover .navbar-link {
             color: $secondary-color;
             transition: all 0.3s;
           }
 
-          a::before {
+          .navbar-link::before {
             content: '';
             position: absolute;
             height: 3px;
             width: 0%;
-            top: 111%;
+            top: 95%;
             left: 0;
             background-color: $secondary-color;
             transition: all 0.3s ease;
           }
 
-          &:hover a::before {
+          &:hover .navbar-link::before {
             width: 100%;
             transition: all 0.3s ease;
+          }
+
+          &:hover .dropdown {
+            opacity: 1;
+            transition: all 0.7s;
+            transform: translateY(-20px);
+          }
+        }
+
+        .dropdown {
+          padding: 20px 108px 20px 11px;
+          position: absolute;
+          background-color: #fff;
+          color: #192839;
+          top: 90px;
+          left: 6px;
+          z-index: 1;
+          opacity: 0;
+          transform: translateY(0px);
+          transition: all 0.7s;
+          .item-dropdown {
+            padding-bottom: 4px;
+            a {
+              color: #192839;
+              &:hover {
+                color: $primary-color;
+              }
+            }
           }
         }
       }

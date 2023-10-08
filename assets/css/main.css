@@ -55,6 +55,7 @@ img {
   transition: all 0.6s;
   font-size: 18px;
   color: #fff;
+  border: 0;
 }
 .custom-btn.outline {
   border: 1px solid #00aeff;
@@ -123,7 +124,6 @@ img {
 
 #nav {
   background-color: #004274;
-  padding: 10px 0;
 }
 #nav a {
   color: #fff;
@@ -143,33 +143,89 @@ img {
   display: flex;
   align-items: center;
 }
-#nav .header-top-side .left-side-navbar .navbar-items li {
-  padding: 17px 15px;
+#nav .header-top-side .left-side-navbar .navbar-items .navbar-item {
+  padding: 25px 15px;
   cursor: pointer;
   position: relative;
 }
-#nav .header-top-side .left-side-navbar .navbar-items li:hover a {
+#nav .header-top-side .left-side-navbar .navbar-items .navbar-item:hover .navbar-link {
   color: #00aeff;
   transition: all 0.3s;
 }
-#nav .header-top-side .left-side-navbar .navbar-items li a::before {
+#nav .header-top-side .left-side-navbar .navbar-items .navbar-item .navbar-link::before {
   content: "";
   position: absolute;
   height: 3px;
   width: 0%;
-  top: 111%;
+  top: 95%;
   left: 0;
   background-color: #00aeff;
   transition: all 0.3s ease;
 }
-#nav .header-top-side .left-side-navbar .navbar-items li:hover a::before {
+#nav .header-top-side .left-side-navbar .navbar-items .navbar-item:hover .navbar-link::before {
   width: 100%;
   transition: all 0.3s ease;
+}
+#nav .header-top-side .left-side-navbar .navbar-items .navbar-item:hover .dropdown {
+  opacity: 1;
+  transition: all 0.7s;
+  transform: translateY(-20px);
+}
+#nav .header-top-side .left-side-navbar .navbar-items .dropdown {
+  padding: 20px 108px 20px 11px;
+  position: absolute;
+  background-color: #fff;
+  color: #192839;
+  top: 90px;
+  left: 6px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(0px);
+  transition: all 0.7s;
+}
+#nav .header-top-side .left-side-navbar .navbar-items .dropdown .item-dropdown {
+  padding-bottom: 4px;
+}
+#nav .header-top-side .left-side-navbar .navbar-items .dropdown .item-dropdown a {
+  color: #192839;
+}
+#nav .header-top-side .left-side-navbar .navbar-items .dropdown .item-dropdown a:hover {
+  color: #004274;
 }
 #nav .header-top-side .right-side-navbar span {
   color: #fff;
   border-bottom: 1px dashed #fff;
   padding-bottom: 5px;
+}
+
+#footer {
+  padding-top: 100px;
+}
+#footer .footer-caption {
+  padding-bottom: 45px;
+}
+#footer .number {
+  color: #004274;
+  font-size: 25px;
+}
+#footer .space {
+  padding: 25px 0;
+}
+#footer ul li {
+  padding-left: 8px;
+}
+#footer ul li a {
+  color: #ccc;
+}
+#footer .footer-item ul li {
+  padding-top: 14px;
+}
+#footer .footer-item ul li a {
+  cursor: pointer;
+}
+#footer .footer-bottom {
+  background-color: #00a0eb;
+  padding: 10px 0;
 }
 
 #hero {
@@ -318,6 +374,138 @@ img {
 #sale .card-custom .card-info .bedroom-info span {
   color: #192839;
   font-size: 15px;
+}
+
+#property-type {
+  background-color: #f2f4f8;
+}
+#property-type .section-title {
+  text-align: left;
+}
+#property-type .property-type {
+  text-align: center;
+  padding: 40px 55px 35px 55px;
+  background-color: #fff;
+  position: relative;
+  transition: all 0.8s;
+  z-index: 1;
+  cursor: pointer;
+}
+#property-type .property-type a {
+  color: #000;
+}
+#property-type .property-type:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all 0.5s;
+}
+#property-type .property-type:hover a {
+  color: #00aeff;
+  border-bottom: 3px solid #00aeff;
+  transition: all 0.2s;
+}
+#property-type .property-type:before {
+  content: "";
+  width: 0%;
+  position: absolute;
+  background: #f2f4f8;
+  transition: all 0.6s;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+#property-type .property-type:hover::before {
+  width: 100%;
+}
+
+#our-agents .team-agent {
+  transition: all 0.7s;
+}
+#our-agents .team-agent img {
+  transition: all 0.7s;
+}
+#our-agents .team-agent:hover img {
+  transform: scale(1.1);
+  transition: all 0.7s;
+}
+#our-agents .team-agent .agent-img {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.7s;
+}
+#our-agents .team-agent .agent-img:hover .social-icons {
+  z-index: 1;
+  transition: all 0.8s;
+  transform: translateY(-70px);
+}
+#our-agents .team-agent .agent-img .social-icons {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -2;
+  transition: all 0.8s;
+  transform: translateY(0px);
+}
+#our-agents .team-agent .agent-img .social-icons ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#our-agents .team-agent .agent-img .social-icons ul a {
+  background-color: #004274;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 8px;
+  display: inline-block;
+}
+#our-agents .team-agent .agent-info {
+  padding-top: 25px;
+  text-align: center;
+}
+#our-agents .team-agent .agent-info a {
+  color: #000;
+}
+
+#subscribe {
+  background-color: #004274;
+}
+#subscribe .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+#subscribe .subscribe-left-side {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+#subscribe .subscribe-left-side p {
+  width: 70%;
+}
+#subscribe .subscribe-left-side input {
+  background: 0;
+  border: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
+}
+#subscribe .subscribe-left-side input::placeholder {
+  color: #fff;
+}
+#subscribe .subscribe-left-side input:focus {
+  outline: 0;
+  color: #fff;
+}
+#subscribe .subscribe-right-side {
+  background-image: url(https://preview.colorlib.com/theme/konato/assets/img/gallery/subscribe-img.jpg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
 }
 
 @media (min-width: 0px) and (max-width: 576px) {

@@ -95,6 +95,152 @@
 }
 // Sale End
 
+//Property Type Start
+#property-type {
+  background-color: #f2f4f8;
+  .section-title {
+    text-align: left;
+  }
+
+  .property-type {
+    text-align: center;
+    padding: 40px 55px 35px 55px;
+    background-color: $white-color;
+    position: relative;
+    transition: all 0.8s;
+    z-index: 1;
+    cursor: pointer;
+
+    a {
+      color: $dark-color;
+    }
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      transition: all 0.5s;
+
+      a {
+        color: $secondary-color;
+        border-bottom: 3px solid $secondary-color;
+        transition: all 0.2s;
+      }
+    }
+    &:before {
+      content: '';
+      width: 0%;
+      position: absolute;
+      background: #f2f4f8;
+      transition: all 0.6s;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      z-index: -1;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}
+//Property Type End
+
+//Our Agents Start
+#our-agents {
+  .team-agent {
+    transition: all 0.7s;
+    img {
+      transition: all 0.7s;
+    }
+    &:hover img {
+      transform: scale(1.1);
+      transition: all 0.7s;
+    }
+    .agent-img {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.7s;
+
+      &:hover .social-icons {
+        z-index: 1;
+        transition: all 0.8s;
+        transform: translateY(-70px);
+      }
+      .social-icons {
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: -2;
+        transition: all 0.8s;
+        transform: translateY(0px);
+        ul {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+
+          a {
+            background-color: $primary-color;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 14px;
+            line-height: 40px;
+            text-align: center;
+            margin-left: 8px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .agent-info {
+      padding-top: 25px;
+      text-align: center;
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+//Our Agents End
+
+// Subscribe Start
+#subscribe {
+  background-color: $primary-color;
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .subscribe-left-side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    p {
+      width: 70%;
+    }
+    input {
+      background: 0;
+      border: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #fff;
+      &::placeholder {
+        color: #fff;
+      }
+      &:focus {
+        outline: 0;
+        color: #fff;
+      }
+    }
+  }
+  .subscribe-right-side {
+    background-image: url(https://preview.colorlib.com/theme/konato/assets/img/gallery/subscribe-img.jpg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+  }
+}
+// Subscribe End
+
 //! Media Queries
 //Mobile
 @media (min-width: 0px) and (max-width: 576px) {
