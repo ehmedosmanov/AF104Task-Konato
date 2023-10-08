@@ -1,0 +1,45 @@
+@use '../abstracts/index' as *;
+
+@mixin card-custom {
+  .card-custom {
+    .card-img {
+      overflow: hidden;
+    }
+    img {
+      transition: all 0.5s;
+      object-fit: cover;
+      width: 100%;
+    }
+    &:hover img {
+      transition: all 0.5s;
+      transform: scale(1.1);
+    }
+    .card-content {
+      border: 1px solid #beccd6;
+      padding: 30px 20px 15px 20px;
+      span {
+        color: $secondary-color;
+      }
+      a {
+        font-size: 1.2rem;
+        color: $dark-color;
+      }
+      p {
+        color: #5e5e5e;
+        line-height: 1.6;
+      }
+    }
+    .card-info {
+      border: 1px solid #beccd6;
+      padding: 20px 25px;
+      display: flex;
+      justify-content: space-between;
+      .bedroom-info {
+        span {
+          color: #192839;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
