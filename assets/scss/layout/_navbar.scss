@@ -1,0 +1,94 @@
+@use '../abstracts/index' as *; //! Import variables and mixins from the 'index' file in the 'abstracts' directory.
+
+// Navbar Start
+#nav {
+  background-color: $primary-color;
+  padding: 10px 0;
+  a {
+    color: #fff;
+  }
+
+  .header-top-side {
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 18px;
+    }
+
+    .left-side-navbar {
+      display: flex;
+      align-items: center;
+
+      .navbar-items {
+        display: flex;
+        align-items: center;
+
+        li {
+          padding: 17px 15px;
+          cursor: pointer;
+          position: relative;
+          &:hover a {
+            color: $secondary-color;
+            transition: all 0.3s;
+          }
+
+          a::before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 0%;
+            top: 111%;
+            left: 0;
+            background-color: $secondary-color;
+            transition: all 0.3s ease;
+          }
+
+          &:hover a::before {
+            width: 100%;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+
+    .right-side-navbar {
+      span {
+        color: $white-color;
+        border-bottom: 1px dashed #fff;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+// Navbar End
+
+.header-bottom-side {
+  background-color: $white-color;
+  padding: 15px 0;
+
+  .search-form {
+    .search-input {
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 50px;
+        padding: 9px 18px 9px 48px;
+        color: #5e5e5e;
+        font-size: 15px;
+        font-weight: 400;
+        border: 1px solid #beccd6;
+        border-radius: 4px;
+        &:focus {
+          outline: 0;
+        }
+      }
+      .search-icon {
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
