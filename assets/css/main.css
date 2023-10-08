@@ -282,6 +282,44 @@ img {
   font-size: 3rem;
 }
 
+#sale .card-custom .card-img {
+  overflow: hidden;
+}
+#sale .card-custom img {
+  transition: all 0.5s;
+  object-fit: cover;
+  width: 100%;
+}
+#sale .card-custom:hover img {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+#sale .card-custom .card-content {
+  border: 1px solid #beccd6;
+  padding: 30px 20px 15px 20px;
+}
+#sale .card-custom .card-content span {
+  color: #00aeff;
+}
+#sale .card-custom .card-content a {
+  font-size: 1.2rem;
+  color: #000;
+}
+#sale .card-custom .card-content p {
+  color: #5e5e5e;
+  line-height: 1.6;
+}
+#sale .card-custom .card-info {
+  border: 1px solid #beccd6;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+#sale .card-custom .card-info .bedroom-info span {
+  color: #192839;
+  font-size: 15px;
+}
+
 @media (min-width: 0px) and (max-width: 576px) {
   html {
     font-size: 12px;
