@@ -1,0 +1,36 @@
+@use '../abstracts/index' as *;
+#footer {
+  padding-top: 100px;
+  .footer-caption {
+    padding-bottom: 45px;
+  }
+  .number {
+    color: $primary-color;
+    font-size: 25px;
+  }
+  .space {
+    padding: 25px 0;
+  }
+  ul {
+    li {
+      padding-left: 8px;
+      a {
+        color: #ccc;
+      }
+    }
+  }
+  .footer-item {
+    ul {
+      li {
+        padding-top: 14px;
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    background-color: $background-color;
+    padding: 10px 0;
+  }
+}
