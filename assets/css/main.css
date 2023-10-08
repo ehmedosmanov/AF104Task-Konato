@@ -250,6 +250,38 @@ img {
   font-size: 15px;
 }
 
+#help-people {
+  background-image: url(https://preview.colorlib.com/theme/konato/assets/img/gallery/section-bg1.jpg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#help-people .section-title h2 {
+  color: #fff;
+  font-size: 2.4rem;
+}
+#help-people .property-box {
+  text-align: center;
+  background-color: #00a0eb;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 50px 30px 39px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#help-people .property-box a {
+  color: #fff;
+}
+#help-people .property-box p {
+  color: #fff;
+  width: 80%;
+  text-align: center;
+}
+#help-people .property-box .box-icon {
+  font-size: 3rem;
+}
+
 @media (min-width: 0px) and (max-width: 576px) {
   html {
     font-size: 12px;
